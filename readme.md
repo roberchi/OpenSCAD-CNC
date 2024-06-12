@@ -75,7 +75,7 @@ The tool operation and path can be showed by activete it with the paramater show
 
 ## Create path API
 The cnc_path.scad libary help to create catting path using primitive like move_to o move_by and circular arc.
-See [path example here](./cnc_path_test_arc.scad)
+See [path example here](./examples/cnc_path_test_arc.scad)
 
 This is a library of functions to create paths in 3D space
 The functions are used to create paths for the extrusion of 3D shapes
