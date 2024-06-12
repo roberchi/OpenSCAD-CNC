@@ -1,4 +1,4 @@
-include <cnc_main.scad>;
+include <../src/cnc_main.scad>;
 path=[
 [0,0,0],
 [0,0,-18],

@@ -1,4 +1,4 @@
-include <cnc_main.scad>;
+include <../src/cnc_main.scad>;
 
 $fn=50;
 create_tool(name="cylinder", h=10, d0=5);

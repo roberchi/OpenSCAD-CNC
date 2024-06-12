@@ -73,11 +73,36 @@ The paramater amimante allo to animate the cutting process over the time, to act
 The tool operation and path can be showed by activete it with the paramater show_tool.
 ![Show tool](./images/show_tool.png)
 
-## Feature to be added
-- Chage cutting tool over the path
-- create CNC command API to build the path like:
-path = set(0,0,0)
-        move(10) relative
-            move(0,20)
+## Create path API
+The cnc_path.scad libary help to create catting path using primitive like move_to o move_by and circular arc.
+See [path example here](./cnc_path_test_arc.scad)
+
+This is a library of functions to create paths in 3D space
+The functions are used to create paths for the extrusion of 3D shapes
+
+The functions are:
+```
+start(x,y,z) - creates a path starting at the given point
+move_by(by, path) - moves the path by the given vector or scalar
+move_to(to, path) - moves the path to the given point
+up(to, path) - moves the path up the cutting tool by the given amount
+down(to, path) - moves the path down the cutting tool by the given amount
+circolar_move(radius, nornal=undef, dir="right", arc=360, path) - creates a circular path segment ($fn is used to determine the number of segments, default is 10)
+```
+
+for example this code generate the following path:
+```
+path = circolar_move(radius=10, arc=90, path=
+        move_by(20,
+            circolar_move(radius=30, arc=180,  path=
+            circolar_move(radius=30, arc=120, dir="l", path=
+             move_by([30], 
+                start(0,0,0))))));
+```
+![Path](./images/cnc_path_test_arc.png)
+
+## Features to be added
+- Change cutting tool over the path
+
 
 
