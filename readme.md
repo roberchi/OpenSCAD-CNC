@@ -1,4 +1,4 @@
-# 3-axies CNC emulation library fro OpenSCAD
+# 3-axies CNC emulation library for OpenSCAD
 This library is an extension for OpenSCAD to emulate the operation of a 3-axies CNC (Computer Numerical Control) machining.
 
 ![Cutting Tool](./images/cnc_example_1.png)
